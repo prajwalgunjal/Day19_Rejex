@@ -9,7 +9,7 @@ public class UserRegistrationProblem {
         String name = sc.next();
         System.out.print("Enter Last name:- ");
         String lname = sc.next();
-        Pattern pattern = Pattern.compile("^[A-Z]?[a-z]{3,}$");
+        Pattern pattern = Pattern.compile("^[A-Z][a-z]{3,}$");
         Matcher matcher = pattern.matcher(name);
         Matcher matcher1 = pattern.matcher(lname);
         if (matcher.matches()&& matcher1.matches())
@@ -21,6 +21,17 @@ public class UserRegistrationProblem {
         Pattern pattern3 = Pattern.compile("^[0-9a-zA-Z]+([a-z0-9A-Z]+)*[@][a-zA-Z]+[.][a-z]{2,4}([.][a-z]{2})?$");
         Matcher matcher3 = pattern3.matcher(Email);
         if(matcher3.matches()){
+            System.out.println("valid");
+        }
+        else {
+            System.out.println("Invalid");
+        }
+
+        System.out.print("Enter Mobile number:- ");
+        String mobileNumber = sc.next();
+        Pattern pattern4 = Pattern.compile("^[0-9]{2,}[0-9]{10,}$");
+        Matcher matcher4 = pattern4.matcher(mobileNumber);
+        if(matcher4.matches()){
             System.out.println("valid");
         }
         else {
