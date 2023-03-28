@@ -38,5 +38,17 @@ public class UserRegistrationProblem {
             System.out.println("Invalid");
         }
 
+
+        System.out.print("Enter Mobile Password:- ");
+        String password = sc.next();
+        Pattern pattern5 = Pattern.compile("^[a-z]{8}$");
+        Matcher matcher5 = pattern5.matcher(password);
+        if(matcher5.matches()){
+            System.out.println("valid");
+        }
+        else {
+            System.out.println("Invalid");
+        }
+
     }
 }
